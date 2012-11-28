@@ -1,0 +1,41 @@
+[user]
+	name = b649
+	email = b649@borqs.com
+[branch]
+	autosetuprebase = always
+[push]
+	default = tracking
+[core]
+    quotepath = false  # 作用：没有这一条，$git status输出中文会显示为UNICODE编码
+[color]
+	status = auto
+	branch = auto
+	diff = auto
+	ui = true
+	pager = true
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+[diff]
+	tool = bcompare_git
+[difftool]
+	prompt = false
+[difftool "bcompare_git"]
+	cmd = /usr/bin/bcompare \"$LOCAL\" \"$REMOTE\"
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+[gui]
+	encoding = utf-8
+[i18n]
+	commitencoding = utf-8
+	logoutputencoding = gbk
